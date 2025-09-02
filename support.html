@@ -1,78 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPPORT</title>
-<style
-    body{
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #fafafa;
-        color: #121212;
-    }
-    header{
-        background: #000;
-        color: #fff;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    header .logo{
-        font-size: 20px;
-        font-weight: bold;
-        color: #fff;
-    }
-    nav a{
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 16px;
-    }
-    .hero{
-        margin-bottom: 20px;
-    }
-    .hero input {
-        width: 60%;
-        padding: 12px;
-        font-size: 16px;
-        border: none;
-        border-radius: 30px;
-        max width: 400px;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #121212;
+        }
 
-    .catogories{
-        display: grid;
-        grid template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        padding: 40px 20px;
-        max-width: 1000px;
-        margin: auto;
-    }
-    .card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 20px;
-        text-align: center;
-        transition: transform 0.2s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    footer {
-        background: #000;
-        color: #fff;
-        text-align: center;
-        padding: 30px 20px;
-        font-size: 14px;
-    }
-       
+        header .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .hero {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .hero input {
+            width: 60%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            max-width: 400px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            width: 100%;
+        }
     </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">Spotify</div>
+        <nav>
+            <a href="#">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Download</a>
+            <a href="#">Log In</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>
+            <p style="color : white" ;> How can we help you?
+            </p>
+        </h1>
+        <input type="text" placeholder="Search...">
+    </section>
+
+    <section class="categories">
+        <div class="card">Account Help</div>
+        <div class="card">Plans</div>
+        <div class="card">App Help</div>
+        <div class="card">Payment</div>
+        <div class="card">Device Support</div>
+        <div class="card">Privacy & Security</div>
+    </section>
+
+    <footer class="footer">
+        © 2025 Spotify Clone – Made for learning purposes only
+    </footer>
 </body>
+
 </html>

@@ -4,44 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>premium</title>
+    <title>Spotify Premium</title>
     <style>
-        .body {
-            background-color: black;
-
+        body {
+            font-family: 'Circular Std', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .main {
+        .header {
+            background-color: #000000;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .premium-container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 800px;
+        }
+
+        .premium-container h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .premium-container p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .plan-card {
+            background-color: #242424;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px;
             text-align: left;
-            grid-area: auto;
-
+            transition: transform 0.2s;
         }
-        .buttons
-        {
-            border-radius: 50%;
-           
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-card h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+
+        .plan-card h3 {
+            font-size: 1.5em;
+            color: #1db954;
+            margin-bottom: 10px;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .plan-card .sign-up-button {
+            background-color: #1db954;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .features {
+            padding: 50px 20px;
+            background-color: #1e1e1e;
+            width: 100%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: #242424;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
         }
     </style>
 </head>
 
-<body class="body">
-    <div class="main">
-        <section>
-            <article>
-                <h1>
-                    <p style="color:white;"> Listen without limits. Try 3 months of premium individual for &#8377;139
-                    </p>
-                </h1>
-            </article>
-        </section>
+<body> 
+    <div class="header">
+        <img src="spotifylogo.png "
+            alt="Spotify Logo">
+    </div>
 
-        <section>
-            <article class="buttons">
-                <button type="submit">Try 3months for &#8377;139</button>
-                <button type="submit">view all plans</button>
-            </article>
-        </section>
+    <div class="premium-container">
+        <h1>Get Premium free for 1 month</h1>
+        <p>Just &#8377;139/month after. Cancel anytime.</p>
 
+        <div class="plan-card">
+            <h2>Individual</h2>
+            <h3> &#8377;139/month</h3>
+            <ul>
+                <li>✅ 1 Premium account</li>
+                <li>✅ Listen to music ad-free</li>
+                <li>✅ Play any song</li>
+                <li>✅ Download music</li>
+            </ul>
+            <a href="#" class="sign-up-button">GET STARTED</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Why go Premium?</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Ad-free music listening</h3>
+                <p>Enjoy nonstop music without interruptions.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Play any song</h3>
+                <p>Skip all you want and play any song you love.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Offline playback</h3>
+                <p>Download your favorite tracks and listen without an internet connection.</p>
+            </div>
+            <div class="feature-item">
+                <h3>High-quality audio</h3>
+                <p>Experience music in a whole new dimension.</p>
+            </div>
+        </div>
     </div>
 </body>
-</htmt>
+
+</html>

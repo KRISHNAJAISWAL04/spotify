@@ -1,38 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAnFBMVEUe12D///8AAAAf3GIA1VMf32Qg42UA1VYf2mIa114I1lkcyVoNXCkA1E8e1F/W9t8bw1cYqkwdzlwA00n1/feK5qNt4Y/t+/EReTYZsU8IOBkKSCAHMRYWnEYOZy6n7LrI89Tj+em378Zc34QUjT8EHw4ThDsDFwoavFSu7b8LTyOA5Z3B8c5Q3HoJPhwFJBABDAUPcDKX6a472nBaM6AUAAAJG0lEQVR4nNWcaXuqPBCGY8MORqBKQcW6UKRqXY7//7+9CahVEhJW6/t8ONe52krvDpPJzGQBvZoaLgafHjIMQ9fBg3QdfxFtPweLYd1ng3ofm49WZ0kycjx3ZIYknVej+dOgFsvVu0QZiAGGyd5Xy8UToHbeuW+IeH5l9IH33S3U4h9Qi99Z0ZtU1e2gkn9VgZpvVaki0YVLlbxlF1DD+dmoaqQ7Gep5V9paZaF2qyqexDRXf7VrFWqwMhoipdYyVoPWoD5GUgtIKVZ/9NEO1A6p9X0pJ91AJTxeCPWx7beGlGL1vUVTqPlZbROJSEUih+dDDUfvrZopk/6+5UcHLtTHT+tmyqT+cP2dBzVXWxp0tAyV9wo5UN/iRKC+dP2zDtSo3VFHUfVH1aG2UpdIRJJXEWq46pwJu/uqYBAWQHlPYCq2FRNq6HUUCvIqsBUT6jl2ImLbigW1fZKdiNRtOah/T7MTkfSvDNR3vTy8rnSJLnYoqEGXcZxJpVMlax5qCJ7MRKjys3MeyutsDi6WkQ8MOajPpzr5VXlnf4Qa9P+CCYD+oBjq4+fpDpVJf0z6HqC6zwyKJG2LoAbtlVKV9fAC76CGf/XyiPSfIRPqb0beVdInC2rYbforkt7/YECNSoVNTdOgjKXkRL6Gv6fVpzJGNNRA0HwiLBCZdhI4YRT7M2szGY+nX1+H6Xg/2VgnPwqdILFNBDAerAGnGwMKipNsahBbwgwif7bZH964Ouw3s1McJgh/oiqZ6uWhFu/sn4QycG3HH/NZaB0nvpOYCFYhe1/koLYsj4KKFsSzfVWgm6aWH9qKUhbM2D5CMbIoTTNDa10b6GayLyu0XQhLQOn64AFqRMUoiPxjY6KrNr6DFDGXNHqAopg0u/5bY+rLclwg4pLuoehgDiftMhGtTw5QuP51Cesp1HCV9ygYts9ENPVtwPF7PctBQRY4899FVjdQWFaIlEKoLIACtpu7X51Bvb3tI1RkrczVUyiq0tPsDpmIYpttLV26QtGZeedQb4eYba002QPs/MCcdk319ha5Mg2V5gqAnXFqM9Ej1+OJddFmXC/w7wOaKh1/gF2ow4D1lGmaAgQ2Avl0SsHzNk5qIv9kTSoYeQbyrzAdfxhqySr25LypNjGe9V0tTZZYzoCTP0hSLuCaSRCVnTR96lH9ZQq1YqacML5+8JDOXEoBDAtPw4mpnESzjTiwhPmZx1ilUAWFFXRIAP06OTaqlUlis6HE8QVZ4T4fGnSVQBWldzibkl1UPYG8F7GZG1qcFPGI8o/HqR7oLTmVVQOe32fIsumcCqmS/O+QlhiKmXO2K1x0wGDGHpUB5VRbDOU9p9yDshmyUrQkD6V7PfC8TguOGQkVKtZU3qf/fIAFqg2lVa4+oZzkvMungrqOFoDOpbgcOELi4YiQi2USkf8ghLJviBE1aM7urDV26Y8YA7Ar29YgwRzYAS6PTxYuStfXsuK4PowvFXKCZHEI0eTklkGuKY/CkubguwQUNgNAZniaTA+86eP4NR1bPg62gF+DQuiMyZ+0tkxWJSF9g3+iNQ8cQ20ntiqkoutNWrgzEpNfrCCKcJ3KRFf/AX6Y0jSU+PsaydVhbIWuVlyDwuIuiLEF3Ma5nDSqSCdRUKYGzUN5gBemoCOYToU6Tk5J1dlTX4FzMVRLmfohSiDHv2ioMw9KEebEJbW2nAo9IQzFeXtai8XfMbLlsli8KUazmzeC7jT1Eb+RUEotQ2HNylqL4+eobai3g1/cR7hH4jk6o8txnE6s2aUTjGdi17RJvziKSbe4VIyNkChw8UefluT+zlmEiz6X9IrlLCnQ0sKKlFak8MOzdbwRWnfiCOIDhqJaU3eC4TWeT3GZBTKS4h9PAWU38Dd8m534joWDJ3+aCcgbHMeOLZeeLkhCjmfwDYcq5lLhaYY/IUOITDKvVhzL5BNuWOxkVAnzALUVpy51hZNCOyyYE048t8KpS5kkrzYXtlfEqkTHvMCAk7x5t6t8mgId2lxTLtS8YuFQRxDYp3UFS+HCoUGJVVqaYvoPk3vM8SlSYj2nGNU007+DsjmjjxSjtcr2rEF2Ez+mXiTbN9+imlIPUF61Bkc2qeD0FtlkfTSKY9/3Y1yXBImblgJcOKgF6Ug8cpmyBgevFXT3RNIDs0lX0xoX1BJkdc9JXAxd+BAliGJHkBunraDCptlVpPOFSz/SYhWXNoeJFeOUvChvSruifKVNs6L24hWJTGRVl7RwbeUKfztbWXuxoBF7EXQLml0i7U+OUif9vTRimS3rizSzSTE6C1CV2irVpWXN25EAffGv5mkTCZYd80rXkQFrCfJXbvM1Gt8utap9hbosg/A2lLiNmXBcOiXlrXVdMOJtenMFKXdJj7PssmnibWmNXoS8CbGy2vFmFkdh6GAF5J8QB/eTxX/RPmsdjdbvImRvVJh9Quf3uevpfuOHgYu0rER4EDYEcoPYGhf1aY5hmaUCdcRZ2L5JjrJHWnEYmJoi85wWlwwKSMKiUGtRKx607ha2eeMP2vHMD0gbs5xbaKTWCDcsg1nCUXi/BYC7843MfFVnDFkxQ0Z57Qh3cNxtlmBsK2kqDQKTWlaLKm0rYexMaIFLAeHj4PUFULkNOINuNldD5OzLW0oHj1uVOltgk5XwNhiP1DLao/KbusSpXm1BFF2gZoK3R21/420UbCrZPR3Ing0BE71RULilsolI9urYAibWlkrOXNMGlnhlUGVsPv37bbpDBlSvy/6LWPcnVV596/efnXAgKtok/5rHCV7z4MVLHlF59om1q/iHef7o2FP+5OErHBAD+TOar3CUjrrZ4f9x6PA1j2e+5kHW1zzyi4vTFzwc/ZLHyJ904F6qeOD+KVcTsHycD/WSlzj0ep+dXndh1LruotfbveDFIDjp6yo0qKvaV6h0d9nMqMFlM1i7Dq7lOTe7lgdr4b3eBUZYyzavelJbueqpRy7Fanp12FXtXYrVe8nrw4h2q6auZby3fNFaL72SrvK9fb/SDfU8b/1KOqKdp9ZzeV1VvbJWqgrVGw626qtdc5hqWf1CyCo3HNaDesmrMzNll4wWexjm6aNnXjKaabgYfG/PetF1rF6T61j/A5g9ubpcvn1GAAAAAElFTkSuQmCC">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>Spotify</title>
-    <link rel="stylesheet" href="home.css ">
-    <link rel="scriptsheet" href="script.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
-
-<body class="body">
-    <div class="main">
-        <header>
+<body>
+    <div class="topbar">
+      
             <div class="logo">
-                <a href="#"><i class="fa-brands fa-spotify"></i></a>
-            </div>
-            <div class="search">
-                <h1 style="color:white;">Spotify</h1>
-
-                <div class="log-in--sign-up">
-                    <button type="submit"><a href="/SignIn-LogIn/sign-up.html"></a>Sign up</button>
-                    <button type="submit"><a href="/SignIn-LogIn/log-in.html"></a>Log in</button>
-                </div>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/10096/10096445.png" alt="Spotify Logo"></a>
             </div>
 
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i></a></li>
+           
+         </ul>
 
-
-
-
+          <div class="search-box"><i class="fas fa-search"></i>
+        <input type="text" placeholder="What do you want to play?">
+       
     </div>
 
 
+    <div class="sidebar"> 
+        <div class="sidebar-nav">
+        <ul>
+            <li><a href="#"><span class="library">
+                <h4>Your Library</h4>
+            </span></a></li>
+            
+            <li> 
+                <div class="sidebar-scroll">
+                    <div class="create-playlist">
+                        <h4>Create your first playlist</h4>
+                        <p>It's easy, we'll help you</p>
+                        <button>Create playlist</button>
+                    </div>
+
+                    <div class="browse-podcasts">
+                        <h4>Let's find some podcasts to follow</h4>
+                        <p>We'll keep you updated on new episodes</p>
+                        <button>Browse podcasts</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+       </div> 
+
+       <div class="privacy">
+        <ul>
+            <li>
+                <a href="">Legal</a>
+                <a href="">Safety & Privacy Center</a>
+                <a href="">Privacy Policy</a>
+            </li>
+             <li>
+                <a href="">Cookies</a>
+                <a href="">About Ads</a>
+                <a href="">Accessibility</a>
+            </li>
+            <li>
+                <a href="">Cookies</a>
+            </li>    
+        </ul>
+       </div>
+
+       <div class="eng-btn">
+        <button>English</button>
+       </div>
+        
+    </div>    
+
+    
+
+    <!-------------------Main Section--------------->
+
+    <div class="main-content">
+        <!--trending songs-->
+        <section class="section">
+            <h2>Trending Songs</h2>
+            <div class="row">
+                    <a href="song.html?song=1" class="card">
+                        <img src="images/song1.jpg" alt="song 1">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Song 1</p>
+                        <span>Artist A</span>
+                    </a>
+                    <a href="song.html?song=2" class="card">
+                        <img src="images/song1.jpg" alt="song 2">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Song 2</p>
+                         <span>Artist B</span>
+                    </a>
+                    <a href="song.html?song=3" class="card">
+                        <img src="images/song1.jpg" alt="song 3">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Song 3</p>
+                         <span>Artist C</span>
+                    </a>  
+                    <a href="song.html?song=4" class="card">
+                        <img src="images/song1.jpg" alt="song 4">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Song 4</p> 
+                        <span>Artist D</span>
+                    </a>
+                    <a href="song.html?song=5" class="card">
+                        <img src="images/song1.jpg" alt="song 5">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Song 5</p>
+                         <span>Artist E</span>
+                    </a>
+                 
+            </div>
+            </section>
+
+
+    
+
+        <!--popular artists-->
+        
+        <section class="section">
+            <h2>Popular Artists</h2>
+            <div class="row">
+                    <a href="artist.html?artist=1" class="artist">
+                        <img src="https://via.placeholder.com/200" alt="Artist">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Artist 1</p>
+                    </a>
+                    <a href="artist.html?artist=2" class="  artist">
+                        <img src="https://via.placeholder.com/200" alt="Artist">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Artist 2</p>
+                    </a>
+                    <a href="artist.html?artist=3" class="artist">
+                        <img src="https://via.placeholder.com/200" alt="Artist">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Artist 3</p>
+                    </a>   
+                    <a href="artist.html?artist=4" class="artist">
+                        <img src="https://via.placeholder.com/200" alt="Artist">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Artist 4</p>
+                    </a>
+                    <a href="artist.html?artist=5" class="artist">
+                        <img src="https://via.placeholder.com/200" alt="Artist">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Artist 5</p>
+                    </a>     
+            </div>
+            </section>
+
+        <!--POPULAR ALBUMS-->
+        
+        <section class="section">
+            <h2>Popular Albums</h2>
+            <div class="row">
+                    <a href="album.html?album=1" class="card">
+                        <img src="https://via.placeholder.com/200" alt="Album">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Album 1</p>
+                    </a>
+                    <a href="album.html?album=2" class="card">
+                        <img src="https://via.placeholder.com/200" alt="Album">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Album 2</p>
+                    </a>
+                    <a href="album.html?album=3" class="card">
+                        <img src="https://via.placeholder.com/200" alt="Album">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Album 3</p>
+                    </a>        
+                    <a href="album.html?album=4" class="card">
+                        <img src="https://via.placeholder.com/200" alt="Album">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Album 4</p>
+                    </a>
+                    <a href="album.html?album=5" class="card">
+                        <img src="https://via.placeholder.com/200" alt="Album">
+                        <div class="overlay"><i class="fa-solid fa-play"></i></div>
+                        <p>Album 5</p>
+                    </a>
+            </div>
+            </section>
+
+           
+           
+    </div>    
 </body>
-
-
-</html>
+</html>    
+            
+   
+          
+                
+           
+        
+               
+       

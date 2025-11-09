@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to spotify</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 20px auto;
+      background-color: #1DB954; /* Spotify-like green */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border: none;
+      border-radius: 25px;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .btn-email {
+      background-color: #1DB954;
+      color: #000;
+    }
+
+    .btn-email:hover {
+      background-color: #17a84a;
+    }
+
+    .btn-phone, .btn-google, .btn-facebook {
+      background-color: transparent;
+      border: 1px solid #333;
+      color: #fff;
+    }
+
+    .btn-phone:hover,
+    .btn-google:hover,
+    .btn-facebook:hover {
+      background-color: #111;
+    }
+
+    .btn img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    p {
+      margin-top: 20px;
+      color: #aaa;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" 
+         alt="Spotify Logo" 
+         style="width: 150px; margin-bottom: 20px;">
+    <h1 id="loginTitle" class="spotify-title">Log in to <span>Spotify</span></h1>
+
+
+    <button class="btn btn-email">📧 Continue with Email</button>
+    <button class="btn btn-phone">📱 Continue with Phone Number</button>
+    <button class="btn btn-google">
+      <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google"> Continue with Google
+    </button>
+    <button class="btn btn-facebook">
+      <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" alt="Facebook"> Continue with Facebook
+    </button>
+
+    <p>Don't have an account?
+        <br> <a href="#">Sign up</a></p>
+  </div>
+
+</body>
+</html>
